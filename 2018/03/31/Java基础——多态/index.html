@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Java,多态," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="少年游">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="多态是Java的三大特性之一，也是面试常考题，这里来介绍一下什么是多态，如何实现多态，哪些情况下需要用到多态。">
+<meta name="keywords" content="Java,多态">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础——多态">
+<meta property="og:url" content="http://yoursite.com/2018/03/31/Java基础——多态/index.html">
 <meta property="og:site_name" content="少年游">
+<meta property="og:description" content="多态是Java的三大特性之一，也是面试常考题，这里来介绍一下什么是多态，如何实现多态，哪些情况下需要用到多态。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-31T12:34:43.929Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="少年游">
+<meta name="twitter:title" content="Java基础——多态">
+<meta name="twitter:description" content="多态是Java的三大特性之一，也是面试常考题，这里来介绍一下什么是多态，如何实现多态，哪些情况下需要用到多态。">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/31/Java基础——多态/"/>
 
 
 
 
 
-  <title>少年游</title>
+  <title>Java基础——多态 | 少年游</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,9 +248,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -276,9 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/31/Java基础——多态/" itemprop="url">Java基础——多态</a></h1>
+          <h1 class="post-title" itemprop="name headline">Java基础——多态</h1>
         
 
         <div class="post-meta">
@@ -354,6 +356,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i> 浏览
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
 
           
 
@@ -372,16 +379,35 @@
       
 
       
-        
-          <p><strong>多态是Java的三大特性之一，也是面试常考题，这里来介绍一下什么是多态，如何实现多态，哪些情况下需要用到多态。</strong><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/31/Java基础——多态/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p><strong>多态是Java的三大特性之一，也是面试常考题，这里来介绍一下什么是多态，如何实现多态，哪些情况下需要用到多态。</strong><br><a id="more"></a></p>
+<h1 id="一、什么是多态"><a href="#一、什么是多态" class="headerlink" title="一、什么是多态"></a>一、什么是多态</h1><p>多态是同一个行为具有多个不同表现形式或形态的能力。</p>
+<p>多态的存在有<strong>三个前提</strong>：</p>
+<ol>
+<li>要有继承关系</li>
+<li>子类要重写（override）父类的方法</li>
+<li>父类引用指向子类对象</li>
+</ol>
+<p>我们举个例子来说明，首先定义两个类，一个父类Animal，一个子类Cat。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">//父类Animal</div><div class="line"></div><div class="line">class Animal &#123;</div><div class="line">  int num = 10;</div><div class="line">  static int age = 20;</div><div class="line">  public void eat() &#123;</div><div class="line">    System.out.println(&quot;动物吃饭&quot;);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  public static void sleep() &#123;</div><div class="line">    System.out.println(&quot;动物睡觉&quot;);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  public void run() &#123;</div><div class="line">    System.out.println(&quot;动物奔跑&quot;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">//子类Cat</div><div class="line"></div><div class="line">class Cat extends Animal &#123;</div><div class="line">  int num = 80;</div><div class="line">  static int age = 90;</div><div class="line">  String name = &quot;tom&quot;;</div><div class="line">  public void eat() &#123;</div><div class="line">    System.out.println(&quot;猫吃饭&quot;)；</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  public static void sleep() &#123;</div><div class="line">    System.out.println(&quot;猫睡觉&quot;)；</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  public void catchMouse() &#123;</div><div class="line">    System.out.println(&quot;猫抓老鼠&quot;)；</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">class Test &#123;</div><div class="line">  public static void main(String[] args) &#123;</div><div class="line">    Animal an = new Cat();//这里就是父类的引用指向子类对象</div><div class="line">    an.eat();</div><div class="line">    an.sleep();</div><div class="line">    an.run();</div><div class="line"></div><div class="line">    System.out.println(an.num);//输出结果10</div><div class="line">    System.out.println(an.age);//输出结果20</div><div class="line"></div><div class="line">    //an.catchMouse();//子类特有方法，调用时报错</div><div class="line">    //System.out.println(an.name);//子类特有方法，调用时报错</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>以上代码充分体现了多态的三个前提，我们来看看代码输出的结果：</p>
+<blockquote>
+<p>猫吃饭</p>
+<p>动物睡觉</p>
+<p>动物奔跑</p>
+<p>10</p>
+<p>20</p>
+</blockquote>
+<p>子类Cat重写了父类Animal的非静态成员方法an.eat()的输出结果为：猫吃饭<br>重写了父类的静态方法an.sleep()的输出结果为：动物睡觉<br>未被重写的方法an.run()的输出结果为：动物奔跑<br>据此我们可以得出多态成员访问的特点：<br><strong>成员变量</strong>（在类之内、方法之外定义的变量）<br>编译看左边（父类），运行也看左边（父类）<br><strong>成员方法</strong>（类之内创建的方法）<br>编译看左边（父类），运行看右边（子类）。动态绑定<br><strong>静态方法</strong>（static修饰的方法）<br>编译看左边（父类），运行也看左边（父类）。   </p>
+<h3 id="总结：只有非静态的成员方法才是编译看左边运行看右边。"><a href="#总结：只有非静态的成员方法才是编译看左边运行看右边。" class="headerlink" title="总结：只有非静态的成员方法才是编译看左边运行看右边。"></a>总结：只有非静态的成员方法才是编译看左边运行看右边。</h3><h1 id="二、如何实现多态"><a href="#二、如何实现多态" class="headerlink" title="二、如何实现多态"></a>二、如何实现多态</h1><p>有三种实现方式：  </p>
+<ol>
+<li>接口实现   </li>
+<li>继承父类进行方法重写（Override）   </li>
+<li>同一个类中进行方法重载（Overload）     </li>
+</ol>
+<h1 id="三、多态的使用情景"><a href="#三、多态的使用情景" class="headerlink" title="三、多态的使用情景"></a>三、多态的使用情景</h1><p>在开发过程中，我们会先设计一个框架，这就是一个父类，框架是简洁的。当我们在这个框架下构造具体的实例时，每个实例都有自己的特点，只需要重写父类相应的方法就可调用。举个例子：<br>我们需要建设一个动物园，动物园里动物种类繁多，我们可以先创建一个Animal类，将动物园里所有动物都会用到的方法放进去，比如动物都会动，但可能动的方式不一样，我们就可以创建一个方法move()。动物园里的各种动物根据自己的实际情况重写move()方法即可。   </p>
+<h2 id="在多态情况下，不能调用子类独有的变量或方法！"><a href="#在多态情况下，不能调用子类独有的变量或方法！" class="headerlink" title="在多态情况下，不能调用子类独有的变量或方法！"></a>在多态情况下，不能调用子类独有的变量或方法！</h2>
       
     </div>
     
@@ -396,14 +422,22 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/多态/" rel="tag"># 多态</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -413,10 +447,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -424,6 +459,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -444,8 +483,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -507,6 +555,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、什么是多态"><span class="nav-number">1.</span> <span class="nav-text">一、什么是多态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#总结：只有非静态的成员方法才是编译看左边运行看右边。"><span class="nav-number">1.0.1.</span> <span class="nav-text">总结：只有非静态的成员方法才是编译看左边运行看右边。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、如何实现多态"><span class="nav-number">2.</span> <span class="nav-text">二、如何实现多态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、多态的使用情景"><span class="nav-number">3.</span> <span class="nav-text">三、多态的使用情景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在多态情况下，不能调用子类独有的变量或方法！"><span class="nav-number">3.1.</span> <span class="nav-text">在多态情况下，不能调用子类独有的变量或方法！</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -660,6 +724,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
