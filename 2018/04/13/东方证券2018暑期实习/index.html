@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Java,多态," />
+  <meta name="keywords" content="笔经面经," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="多态是Java的三大特性之一，也是面试常考题，这里来介绍一下什么是多态，如何实现多态，哪些情况下需要用到多态。">
-<meta name="keywords" content="Java,多态">
+<meta name="description" content="人生中第一次线下笔试跟面试，还是有点紧张，要多多总结">
+<meta name="keywords" content="笔经面经">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java基础——多态">
-<meta property="og:url" content="http://yoursite.com/2018/03/31/Java基础——多态/index.html">
+<meta property="og:title" content="东方证券2018暑期实习">
+<meta property="og:url" content="http://yoursite.com/2018/04/13/东方证券2018暑期实习/index.html">
 <meta property="og:site_name" content="少年游">
-<meta property="og:description" content="多态是Java的三大特性之一，也是面试常考题，这里来介绍一下什么是多态，如何实现多态，哪些情况下需要用到多态。">
+<meta property="og:description" content="人生中第一次线下笔试跟面试，还是有点紧张，要多多总结">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-31T12:34:43.929Z">
+<meta property="og:updated_time" content="2018-04-13T13:59:35.281Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java基础——多态">
-<meta name="twitter:description" content="多态是Java的三大特性之一，也是面试常考题，这里来介绍一下什么是多态，如何实现多态，哪些情况下需要用到多态。">
+<meta name="twitter:title" content="东方证券2018暑期实习">
+<meta name="twitter:description" content="人生中第一次线下笔试跟面试，还是有点紧张，要多多总结">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/31/Java基础——多态/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/13/东方证券2018暑期实习/"/>
 
 
 
 
 
-  <title>Java基础——多态 | 少年游</title>
+  <title>东方证券2018暑期实习 | 少年游</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/31/Java基础——多态/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/13/东方证券2018暑期实习/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="You Wang">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java基础——多态</h1>
+          <h1 class="post-title" itemprop="name headline">东方证券2018暑期实习</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-31T14:39:19+08:00">
-                2018-03-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-13T14:08:39+08:00">
+                2018-04-13
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习/" itemprop="url" rel="index">
-                    <span itemprop="name">学习</span>
+                  <a href="/categories/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
                   </a>
                 </span>
 
@@ -326,19 +326,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习/编程/" itemprop="url" rel="index">
-                    <span itemprop="name">编程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/学习/编程/Java基础/" itemprop="url" rel="index">
-                    <span itemprop="name">Java基础</span>
+                  <a href="/categories/总结/笔经面经/" itemprop="url" rel="index">
+                    <span itemprop="name">笔经面经</span>
                   </a>
                 </span>
 
@@ -373,7 +362,7 @@
                   <span class="post-meta-item-text"> 字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  805 字
+                  1,187 字
                 </span>
               
 
@@ -389,7 +378,7 @@
                   <span class="post-meta-item-text"> 阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -410,35 +399,13 @@
       
 
       
-        <p><strong>多态是Java的三大特性之一，也是面试常考题，这里来介绍一下什么是多态，如何实现多态，哪些情况下需要用到多态。</strong><br><a id="more"></a></p>
-<h1 id="一、什么是多态"><a href="#一、什么是多态" class="headerlink" title="一、什么是多态"></a>一、什么是多态</h1><p>多态是同一个行为具有多个不同表现形式或形态的能力。</p>
-<p>多态的存在有<strong>三个前提</strong>：</p>
-<ol>
-<li>要有继承关系</li>
-<li>子类要重写（override）父类的方法</li>
-<li>父类引用指向子类对象</li>
-</ol>
-<p>我们举个例子来说明，首先定义两个类，一个父类Animal，一个子类Cat。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">//父类Animal</div><div class="line"></div><div class="line">class Animal &#123;</div><div class="line">  int num = 10;</div><div class="line">  static int age = 20;</div><div class="line">  public void eat() &#123;</div><div class="line">    System.out.println(&quot;动物吃饭&quot;);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  public static void sleep() &#123;</div><div class="line">    System.out.println(&quot;动物睡觉&quot;);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  public void run() &#123;</div><div class="line">    System.out.println(&quot;动物奔跑&quot;);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">//子类Cat</div><div class="line"></div><div class="line">class Cat extends Animal &#123;</div><div class="line">  int num = 80;</div><div class="line">  static int age = 90;</div><div class="line">  String name = &quot;tom&quot;;</div><div class="line">  public void eat() &#123;</div><div class="line">    System.out.println(&quot;猫吃饭&quot;)；</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  public static void sleep() &#123;</div><div class="line">    System.out.println(&quot;猫睡觉&quot;)；</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  public void catchMouse() &#123;</div><div class="line">    System.out.println(&quot;猫抓老鼠&quot;)；</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">class Test &#123;</div><div class="line">  public static void main(String[] args) &#123;</div><div class="line">    Animal an = new Cat();//这里就是父类的引用指向子类对象</div><div class="line">    an.eat();</div><div class="line">    an.sleep();</div><div class="line">    an.run();</div><div class="line"></div><div class="line">    System.out.println(an.num);//输出结果10</div><div class="line">    System.out.println(an.age);//输出结果20</div><div class="line"></div><div class="line">    //an.catchMouse();//子类特有方法，调用时报错</div><div class="line">    //System.out.println(an.name);//子类特有方法，调用时报错</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>以上代码充分体现了多态的三个前提，我们来看看代码输出的结果：</p>
-<blockquote>
-<p>猫吃饭</p>
-<p>动物睡觉</p>
-<p>动物奔跑</p>
-<p>10</p>
-<p>20</p>
-</blockquote>
-<p>子类Cat重写了父类Animal的非静态成员方法an.eat()的输出结果为：猫吃饭<br>重写了父类的静态方法an.sleep()的输出结果为：动物睡觉<br>未被重写的方法an.run()的输出结果为：动物奔跑<br>据此我们可以得出多态成员访问的特点：<br><strong>成员变量</strong>（在类之内、方法之外定义的变量）<br>编译看左边（父类），运行也看左边（父类）<br><strong>成员方法</strong>（类之内创建的方法）<br>编译看左边（父类），运行看右边（子类）。动态绑定<br><strong>静态方法</strong>（static修饰的方法）<br>编译看左边（父类），运行也看左边（父类）。   </p>
-<h3 id="总结：只有非静态的成员方法才是编译看左边运行看右边。"><a href="#总结：只有非静态的成员方法才是编译看左边运行看右边。" class="headerlink" title="总结：只有非静态的成员方法才是编译看左边运行看右边。"></a>总结：只有非静态的成员方法才是编译看左边运行看右边。</h3><h1 id="二、如何实现多态"><a href="#二、如何实现多态" class="headerlink" title="二、如何实现多态"></a>二、如何实现多态</h1><p>有三种实现方式：  </p>
-<ol>
-<li>接口实现   </li>
-<li>继承父类进行方法重写（Override）   </li>
-<li>同一个类中进行方法重载（Overload）     </li>
-</ol>
-<h1 id="三、多态的使用情景"><a href="#三、多态的使用情景" class="headerlink" title="三、多态的使用情景"></a>三、多态的使用情景</h1><p>在开发过程中，我们会先设计一个框架，这就是一个父类，框架是简洁的。当我们在这个框架下构造具体的实例时，每个实例都有自己的特点，只需要重写父类相应的方法就可调用。举个例子：<br>我们需要建设一个动物园，动物园里动物种类繁多，我们可以先创建一个Animal类，将动物园里所有动物都会用到的方法放进去，比如动物都会动，但可能动的方式不一样，我们就可以创建一个方法move()。动物园里的各种动物根据自己的实际情况重写move()方法即可。   </p>
-<h2 id="在多态情况下，不能调用子类独有的变量或方法！"><a href="#在多态情况下，不能调用子类独有的变量或方法！" class="headerlink" title="在多态情况下，不能调用子类独有的变量或方法！"></a>在多态情况下，不能调用子类独有的变量或方法！</h2>
+        <p><strong>人生中第一次线下笔试跟面试，还是有点紧张，要多多总结</strong><br><a id="more"></a></p>
+<h1 id="笔试"><a href="#笔试" class="headerlink" title="笔试"></a>笔试</h1><h3 id="一、HTTP状态码403的含义"><a href="#一、HTTP状态码403的含义" class="headerlink" title="一、HTTP状态码403的含义"></a>一、HTTP状态码403的含义</h3><p>常见的状态码：<br>1XX：Informational（信息性状态码），接收的请求正在处理<br>2XX：Success（成功状态码），请求正常处理完毕<br>  -200 OK<br>  -204  No Content：请求已经成功处理，但是返回的响应报文不包含实体的主体部分。一般在只需要从客户端往服务器发送信息，而不需要返回数据时使用。<br>  -206  Partial Content：表示客户端进行了范围请求。响应报文包含由Content-Range 指定范围的实体内容。<br>3XX：Redirection(重定向状态码)，需要进行附加操作以完成请求<br>-301 Moved Permanently:永久性重定向<br>-302 Found：临时性重定向<br>-303 See Other：和302功能相同，但303明确要求客户端应该采用GET方法获取资源。<br>-304 Not Modified：请求报文首部包含一些条件，但并不满足条件，则会返回304<br>-307 Temporary Redirect：临时性重定向，与302类似，但307要求浏览器不会把重定向的请求的POST方法改成GET方法。<br>4XX：Client Error(客户端错误状态码)，服务器无法处理请求<br>-400 Bad Request：请求报文中存在语法错误<br>-401 Unauthorized：表示发送的请求需要有认证信息（BASIC认证，DIGEST认证），如果之前已进行过一次请求，则表示用户认证失败。<br>-403 Forbidden：服务器已经理解请求，但是拒绝执行它。<br>-404 Not Found：请求失败，请求所希望得到的资源未在服务器上发现。<br>5XX Server Error（服务器错误状态码），服务器处理请求出错<br>-500  Internal Server Error：服务器遇到了一个未曾预料的状况，导致了它无法完成对请求的处理。一般来说，这个问题都会在服务器端的源代码出现错误时出现。<br>-503  Service Unavailable：由于临时的服务器维护或者过载，服务器当前无法处理请求。这个状况是临时的，并且将在一段时间以后恢复。  </p>
+<h3 id="二、代码如下，问输出结果"><a href="#二、代码如下，问输出结果" class="headerlink" title="二、代码如下，问输出结果"></a>二、代码如下，问输出结果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">public class Train&#123;</div><div class="line">	public static void main(String[] args)&#123;</div><div class="line">		int x,y,z;</div><div class="line">		x = 1;</div><div class="line">		y = 1;</div><div class="line">		z = (x++) + (++y) + (y++);</div><div class="line">		System.out.println(x);</div><div class="line">		System.out.println(y);</div><div class="line">		System.out.println(z);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>这里主要考察X++与++X的区别，X++是先使用当前值然后再进行自增操作，++X则是先自增再使用更新后的值。</strong><br>本题输出：2,3,5   </p>
+<h3 id="三、编程题：某公司总人数为N，平均年龄为Y，离职率为x（0-lt-x-lt-1），保持总人数不变进行招新，新进员工平均年龄为21。输入N-Y-x-以及年份n，输出平均年龄。"><a href="#三、编程题：某公司总人数为N，平均年龄为Y，离职率为x（0-lt-x-lt-1），保持总人数不变进行招新，新进员工平均年龄为21。输入N-Y-x-以及年份n，输出平均年龄。" class="headerlink" title="三、编程题：某公司总人数为N，平均年龄为Y，离职率为x（0&lt;x&lt;1），保持总人数不变进行招新，新进员工平均年龄为21。输入N,Y,x,以及年份n，输出平均年龄。"></a>三、编程题：某公司总人数为N，平均年龄为Y，离职率为x（0&lt;x&lt;1），保持总人数不变进行招新，新进员工平均年龄为21。输入N,Y,x,以及年份n，输出平均年龄。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">import java.util.Scanner;</div><div class="line">public class Main&#123;</div><div class="line">	/*坑很多，我当时没想到的是老员工每年的年纪要加1，所以一度怀疑给出的输入输出样例错了，</div><div class="line">	 * 向上取整函数也不知道，而且取整只能对最后的结果取整，中间计算过程不能取整</div><div class="line">	 * 现场做的时候忘了用循环，快被自己蠢死了</div><div class="line">	 * 这个题是不够严谨的，应该得说明离职员工的平均年龄与现公司总平均年龄相同</div><div class="line">	*/</div><div class="line">	public static int Average(int N , double Y, double x, int n)&#123;  //差点忘了函数返回值的类型没写</div><div class="line">		for(int i = 0; i &lt; n; i++)&#123;</div><div class="line">		Y=(Y+1)*(1.0-x)+21.0*x;//结果是与N无关的，这是干扰条件</div><div class="line">		&#125;</div><div class="line">		return (int)Math.ceil(Y);//向上取整函数</div><div class="line">	&#125;</div><div class="line">	public static void main(String[] args)&#123;</div><div class="line">		Scanner sc = new Scanner(System.in);</div><div class="line">		while(sc.hasNext())&#123;</div><div class="line">			int N = sc.nextInt();</div><div class="line">			double Y = sc.nextDouble();</div><div class="line">			double x = sc.nextDouble();</div><div class="line">			int n = sc.nextInt();</div><div class="line">			System.out.println(Average(N,Y,x,n));</div><div class="line">		&#125;</div><div class="line">		sc.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h1><h3 id="简述快排"><a href="#简述快排" class="headerlink" title="简述快排"></a>简述快排</h3><p>讲了一下经典快排，原理还是蛮简单的，面试官可能也不是特别专业，接着问了从一列数中找到第K大的数，果然是经典题，不过我还没看过，就说了先快排再直接返回第K个数即可，时间复杂度是O(nlogn)，面试官说可以优化到O(n)，说了一下我没听懂。回来查了一下，应该还是快排思想，只是不需要全部排序，快排第一趟过后，大于基准值x的在左边，小于x的在右边，如果左边的元素个数大于等于k，那么只需要在这个区间内找到第k个即可，否则即是在右边区间找到k-左边区间长度大的那个数，并不需要全部排完。<br>面试还问了别的一些问题，但都没什么好提的，面试官让我回去好好学习。。。</p>
+
       
     </div>
     
@@ -455,9 +422,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Java/" rel="tag"># Java</a>
-          
-            <a href="/tags/多态/" rel="tag"># 多态</a>
+            <a href="/tags/笔经面经/" rel="tag"># 笔经面经</a>
           
         </div>
       
@@ -470,15 +435,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/03/31/Java基础——多态/" rel="next" title="Java基础——多态">
+                <i class="fa fa-chevron-left"></i> Java基础——多态
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/13/东方证券2018暑期实习/" rel="prev" title="东方证券2018暑期实习">
-                东方证券2018暑期实习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -612,7 +577,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、什么是多态"><span class="nav-number">1.</span> <span class="nav-text">一、什么是多态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#总结：只有非静态的成员方法才是编译看左边运行看右边。"><span class="nav-number">1.0.1.</span> <span class="nav-text">总结：只有非静态的成员方法才是编译看左边运行看右边。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、如何实现多态"><span class="nav-number">2.</span> <span class="nav-text">二、如何实现多态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、多态的使用情景"><span class="nav-number">3.</span> <span class="nav-text">三、多态的使用情景</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#在多态情况下，不能调用子类独有的变量或方法！"><span class="nav-number">3.1.</span> <span class="nav-text">在多态情况下，不能调用子类独有的变量或方法！</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#笔试"><span class="nav-number">1.</span> <span class="nav-text">笔试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、HTTP状态码403的含义"><span class="nav-number">1.0.1.</span> <span class="nav-text">一、HTTP状态码403的含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、代码如下，问输出结果"><span class="nav-number">1.0.2.</span> <span class="nav-text">二、代码如下，问输出结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、编程题：某公司总人数为N，平均年龄为Y，离职率为x（0-lt-x-lt-1），保持总人数不变进行招新，新进员工平均年龄为21。输入N-Y-x-以及年份n，输出平均年龄。"><span class="nav-number">1.0.3.</span> <span class="nav-text">三、编程题：某公司总人数为N，平均年龄为Y，离职率为x（0<x<1），保持总人数不变进行招新，新进员工平均年龄为21。输入N,Y,x,以及年份n，输出平均年龄。</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#面试"><span class="nav-number">2.</span> <span class="nav-text">面试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简述快排"><span class="nav-number">2.0.1.</span> <span class="nav-text">简述快排</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
