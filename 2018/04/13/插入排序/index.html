@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="少年游">
 <meta property="og:description" content="排序中最基础的插入排序">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-14T13:49:37.130Z">
+<meta property="og:updated_time" content="2018-04-18T14:00:52.592Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="插入排序">
 <meta name="twitter:description" content="排序中最基础的插入排序">
@@ -384,7 +384,7 @@
                   <span class="post-meta-item-text"> 字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  274 字
+                  298 字
                 </span>
               
 
@@ -421,7 +421,7 @@
       
 
       
-        <p><strong>排序中最基础的插入排序</strong><br><a id="more"></a><br>以升序为例，有一个数组a[n]，将这个数组中的元素分为两部分，前一个部分为已排序好的，后一个部分为未排序的元素。假设分水岭的元素下标为p（即每次将第p个元素插入进排序完成的部分中），那么此时[0,p-1]已排序完成，显然p的取值范围为[1,n-1]，第0个元素是基准元素。取另一个指针j，j从p到1遍历，j处即是第p个元素插入的位置，之所以从后往前遍历，是为了将元素往后挪一个位置时好操作。<br>若<code>a[p] &lt; a[j-1]</code>，则将<code>a[j-1]</code>后移一位，否则，令<code>a[j] = a[p]</code>。<br>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">public class Train &#123;</div><div class="line"></div><div class="line">	public static void insertionSort(int[] a) &#123;</div><div class="line"></div><div class="line">		int temp;</div><div class="line">		for (int p = 1; p &lt; a.length; p++) &#123;</div><div class="line">			for (int j = p; j &gt; 0; j--) &#123;</div><div class="line">				if (a[j] &lt; a[j - 1]) &#123;</div><div class="line">					temp = a[j];</div><div class="line">					a[j] = a[j - 1];</div><div class="line">					a[j - 1] = temp;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] a = &#123; 2, 4, 5, 6, 8, 4, 9, 12 &#125;;</div><div class="line">		insertionSort(a);</div><div class="line">		for (int i : a) &#123;</div><div class="line">			System.out.println(i);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <p><strong>排序中最基础的插入排序</strong><br><a id="more"></a><br>以升序为例，有一个数组a[n]，将这个数组中的元素分为两部分，前一个部分为已排序好的，后一个部分为未排序的元素。假设分水岭的元素下标为p（即每次将第p个元素插入进排序完成的部分中），那么此时[0,p-1]已排序完成，显然p的取值范围为[1,n-1]，第0个元素是基准元素。取另一个指针j，j从p到1遍历，j处即是第p个元素插入的位置，之所以从后往前遍历，是为了将元素往后挪一个位置时好操作。<br>若<code>a[p] &lt; a[j-1]</code>，则将<code>a[j-1]</code>后移一位，否则，令<code>a[j] = a[p]</code>。<br><strong>时间复杂度：顺序O(n),逆序O(n2),平均O(n2)<br>空间复杂度O(1)</strong><br>代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">public class Train &#123;</div><div class="line"></div><div class="line">	public static void insertionSort(int[] a) &#123;</div><div class="line"></div><div class="line">		int temp;</div><div class="line">		for (int p = 1; p &lt; a.length; p++) &#123;</div><div class="line">			for (int j = p; j &gt; 0; j--) &#123;</div><div class="line">				if (a[j] &lt; a[j - 1]) &#123;</div><div class="line">					temp = a[j];</div><div class="line">					a[j] = a[j - 1];</div><div class="line">					a[j - 1] = temp;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	public static void main(String[] args) &#123;</div><div class="line">		int[] a = &#123; 2, 4, 5, 6, 8, 4, 9, 12 &#125;;</div><div class="line">		insertionSort(a);</div><div class="line">		for (int i : a) &#123;</div><div class="line">			System.out.println(i);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
