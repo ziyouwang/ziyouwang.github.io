@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="少年游">
 <meta property="og:description" content="网络编程主要用于解决计算机与计算机之间的数据传输问题">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-20T14:04:11.245Z">
+<meta property="og:updated_time" content="2018-04-21T14:41:13.606Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java网络编程下UDP通讯">
 <meta name="twitter:description" content="网络编程主要用于解决计算机与计算机之间的数据传输问题">
@@ -447,55 +447,56 @@
 <li>调用udp的服务接收数据</li>
 <li>关闭资源<br><strong>注意：要先运行接收端再运行发送端，接收端在运行后是阻塞的，未接收到发送端的信息不会结束进程。</strong><br>代码如下：</li>
 </ol>
-<pre><code>
-//发送端代码示例
+<pre><code class="java">
+<span class="comment">//发送端代码示例</span>
 
-import java.io.IOException;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.net.InetAddress;
+<span class="keyword">import</span> java.io.IOException;
+<span class="keyword">import</span> java.net.DatagramPacket;
+<span class="keyword">import</span> java.net.DatagramSocket;
+<span class="keyword">import</span> java.net.InetAddress;
 
-public class excerise {
-    public static void main(String[] args) throws IOException{
-        //建立udp服务
-        DatagramSocket datagramSocket = new DatagramSocket();
-        //准备数据，把数据封装到数据包中
-        String data = &quot;hello world&quot;;
-        DatagramPacket packet = new DatagramPacket(data.getBytes(),data.getBytes().length,InetAddress.getLocalHost(),9090);
-        //调用udp的服务发送数据包
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">excerise</span> </span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException</span>{
+        <span class="comment">//建立udp服务</span>
+        DatagramSocket datagramSocket = <span class="keyword">new</span> DatagramSocket();
+        <span class="comment">//准备数据，把数据封装到数据包中</span>
+        String data = <span class="string">"hello world"</span>;
+        DatagramPacket packet = <span class="keyword">new</span> DatagramPacket(data.getBytes(),data.getBytes().length,InetAddress.getLocalHost(),<span class="number">9090</span>);
+        <span class="comment">//调用udp的服务发送数据包</span>
         datagramSocket.send(packet);
-        //关闭资源，释放占用的端口号
+        <span class="comment">//关闭资源，释放占用的端口号</span>
         datagramSocket.close();
     }
 
 }
 
 
-//接收端代码示例
+<span class="comment">//接收端代码示例</span>
 
-import java.io.IOException;
-import java.net.DatagramPacket;
-import java.net.DatagramSocket;
-import java.net.SocketException;
+<span class="keyword">import</span> java.io.IOException;
+<span class="keyword">import</span> java.net.DatagramPacket;
+<span class="keyword">import</span> java.net.DatagramSocket;
+<span class="keyword">import</span> java.net.SocketException;
 
-public class receive {
-    public static void main(String[] args) throws IOException{
-        //建立udp服务，并且监听端口
-        DatagramSocket socket = new DatagramSocket(9090);
-        //准备空的数据包用于存放数据
-        byte[] buf = new byte[1024];
-        DatagramPacket datagramPacket = new DatagramPacket(buf,buf.length);
-        //调用udp的服务接收数据
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">receive</span> </span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException</span>{
+        <span class="comment">//建立udp服务，并且监听端口</span>
+        DatagramSocket socket = <span class="keyword">new</span> DatagramSocket(<span class="number">9090</span>);
+        <span class="comment">//准备空的数据包用于存放数据</span>
+        <span class="keyword">byte</span>[] buf = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];
+        DatagramPacket datagramPacket = <span class="keyword">new</span> DatagramPacket(buf,buf.length);
+        <span class="comment">//调用udp的服务接收数据</span>
 
         socket.receive(datagramPacket);
-        System.out.println(&quot;接收端收到的数据： &quot;+ new String(buf,0,datagramPacket.getLength()));
-        //getLength()获取数据包存储了几个字节
-        //关闭资源
+        System.out.println(<span class="string">"接收端收到的数据： "</span>+ <span class="keyword">new</span> String(buf,<span class="number">0</span>,datagramPacket.getLength()));
+        <span class="comment">//getLength()获取数据包存储了几个字节</span>
+        <span class="comment">//关闭资源</span>
         socket.close();
     }
 
 }
-</code></pre><hr>
+</code></pre>
+<hr>
 
       
     </div>
