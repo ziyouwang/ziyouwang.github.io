@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。">
+<meta name="description" content="输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="剑指之二维数组中的查找">
-<meta property="og:url" content="http://yoursite.com/2018/04/21/剑指之二维数组中的查找/index.html">
+<meta property="og:title" content="二进制中1的个数">
+<meta property="og:url" content="http://yoursite.com/2018/04/26/二进制中1的个数/index.html">
 <meta property="og:site_name" content="少年游">
-<meta property="og:description" content="在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。">
+<meta property="og:description" content="输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-21T14:40:01.501Z">
+<meta property="og:updated_time" content="2018-04-27T12:08:49.653Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="剑指之二维数组中的查找">
-<meta name="twitter:description" content="在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。">
+<meta name="twitter:title" content="二进制中1的个数">
+<meta name="twitter:description" content="输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/21/剑指之二维数组中的查找/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/26/二进制中1的个数/"/>
 
 
 
 
 
-  <title>剑指之二维数组中的查找 | 少年游</title>
+  <title>二进制中1的个数 | 少年游</title>
   
 
 
@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/21/剑指之二维数组中的查找/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/26/二进制中1的个数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="You Wang">
@@ -279,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">剑指之二维数组中的查找</h1>
+          <h1 class="post-title" itemprop="name headline">二进制中1的个数</h1>
         
 
         <div class="post-meta">
@@ -291,8 +291,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-21T22:15:56+08:00">
-                2018-04-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-26T21:15:46+08:00">
+                2018-04-26
               </time>
             
 
@@ -372,7 +372,7 @@
                   <span class="post-meta-item-text"> 字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  128 字
+                  119 字
                 </span>
               
 
@@ -409,7 +409,20 @@
       
 
       
-        <p><strong>在一个二维数组中，每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。</strong><br><a id="more"></a><br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> target, <span class="keyword">int</span> [][] array)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> row = <span class="number">0</span>;</div><div class="line">        <span class="keyword">int</span> col = array[<span class="number">0</span>].length-<span class="number">1</span>;<span class="comment">//从右上角开始</span></div><div class="line">        <span class="keyword">while</span>(row&lt;=array.length-<span class="number">1</span>&amp;&amp;col&gt;=<span class="number">0</span>)&#123;</div><div class="line">            <span class="keyword">if</span>(target==array[row][col])&#123;</div><div class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(target&lt;=array[row][col])&#123;</div><div class="line">                col--;</div><div class="line">            &#125;<span class="keyword">else</span>&#123;</div><div class="line">                row++;</div><div class="line">            &#125;</div><div class="line"></div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+        <p><strong>输入一个整数，输出该数二进制表示中1的个数。其中负数用补码表示。</strong><br><a id="more"></a>   </p>
+<pre><code class="java"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>{
+    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">NumberOf1</span><span class="params">(<span class="keyword">int</span> n)</span> </span>{
+        <span class="keyword">int</span> count = <span class="number">0</span>;
+        <span class="keyword">while</span> (n!=<span class="number">0</span>) {
+            ++ count;
+            n = n &amp; (n - <span class="number">1</span>);
+        }
+        <span class="keyword">return</span> count;
+
+    }
+}
+</code></pre>
+<p><strong>最优解，用位运算，原理如下：一个整数与这个数减一，做位与运算，会把该整数的最右边的一个1变成0。那么一个整数的二进制表示中有多少个1，就可以做多少次该操作。</strong></p>
 
       
     </div>
@@ -434,8 +447,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/20/Java网络编程下UDP通讯/" rel="next" title="Java网络编程下UDP通讯">
-                <i class="fa fa-chevron-left"></i> Java网络编程下UDP通讯
+              <a href="/2018/04/26/剑指之矩形覆盖/" rel="next" title="剑指之矩形覆盖">
+                <i class="fa fa-chevron-left"></i> 剑指之矩形覆盖
               </a>
             
           </div>
@@ -444,8 +457,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/21/剑指之替换空格/" rel="prev" title="剑指之替换空格">
-                剑指之替换空格 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/26/数值的整数次方/" rel="prev" title="数值的整数次方">
+                数值的整数次方 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
